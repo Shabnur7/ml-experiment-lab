@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="white"/>
+<text x="800" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="bold" fill="#222">ML Experiment Lab — System Architecture</text>
+<text x="800" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#666">Reproducible ML experiment and benchmarking workflow</text>
+<style>
+.box { fill:#f7f7f7; stroke:#333; stroke-width:2.5; }
+.title { font-family:Arial,sans-serif; font-size:22px; font-weight:bold; fill:#222; }
+.sub { font-family:Arial,sans-serif; font-size:17px; fill:#555; }
+.arrow { stroke:#333; stroke-width:3; fill:none; marker-end:url(#arrow); }
+</style>
+<defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#333"/></marker></defs>
+
+<!-- Data preparation -->
+<rect class="box" x="70" y="180" width="260" height="125" rx="14"/>
+<text class="title" x="200" y="225" text-anchor="middle">Dataset</text>
+<text class="sub" x="200" y="260" text-anchor="middle">Load &amp; structure data</text>
+<text class="sub" x="200" y="286" text-anchor="middle">Breast Cancer dataset</text>
+
+<rect class="box" x="400" y="180" width="260" height="125" rx="14"/>
+<text class="title" x="530" y="225" text-anchor="middle">Validation</text>
+<text class="sub" x="530" y="260" text-anchor="middle">Missing / invalid data</text>
+<text class="sub" x="530" y="286" text-anchor="middle">Failure reporting</text>
+
+<rect class="box" x="730" y="180" width="260" height="125" rx="14"/>
+<text class="title" x="860" y="225" text-anchor="middle">Preprocessing</text>
+<text class="sub" x="860" y="260" text-anchor="middle">Reusable pipeline</text>
+<text class="sub" x="860" y="286" text-anchor="middle">StandardScaler</text>
+
+<rect class="box" x="1060" y="180" width="320" height="125" rx="14"/>
+<text class="title" x="1220" y="225" text-anchor="middle">Experiment Configuration</text>
+<text class="sub" x="1220" y="260" text-anchor="middle">Models • seeds • test size</text>
+<text class="sub" x="1220" y="286" text-anchor="middle">Configuration-driven runs</text>
+
+<path class="arrow" d="M330 242 H390"/>
+<path class="arrow" d="M660 242 H720"/>
+
+<!-- Runner -->
+<rect class="box" x="570" y="420" width="360" height="145" rx="14"/>
+<text class="title" x="750" y="465" text-anchor="middle">Experiment Runner</text>
+<text class="sub" x="750" y="500" text-anchor="middle">Train each configured model</text>
+<text class="sub" x="750" y="528" text-anchor="middle">Across multiple random seeds</text>
+<text class="sub" x="750" y="552" text-anchor="middle">Apply preprocessing pipeline</text>
+
+<path class="arrow" d="M860 305 V390 H750 V410"/>
+<path class="arrow" d="M1220 305 V360 H900 V410"/>
+
+<!-- Evaluation / benchmark -->
+<rect class="box" x="1030" y="420" width="360" height="145" rx="14"/>
+<text class="title" x="1210" y="465" text-anchor="middle">Evaluation</text>
+<text class="sub" x="1210" y="500" text-anchor="middle">Accuracy • Precision • Recall</text>
+<text class="sub" x="1210" y="528" text-anchor="middle">F1 • training/inference time</text>
+
+<path class="arrow" d="M930 492 H1020"/>
+
+<rect class="box" x="1030" y="640" width="360" height="125" rx="14"/>
+<text class="title" x="1210" y="685" text-anchor="middle">Benchmarking</text>
+<text class="sub" x="1210" y="720" text-anchor="middle">Compare models</text>
+<text class="sub" x="1210" y="746" text-anchor="middle">Aggregate results</text>
+<path class="arrow" d="M1210 565 V630"/>
+
+<!-- Outputs -->
+<rect class="box" x="280" y="640" width="300" height="125" rx="14"/>
+<text class="title" x="430" y="685" text-anchor="middle">Logging</text>
+<text class="sub" x="430" y="720" text-anchor="middle">Experiment lifecycle</text>
+<text class="sub" x="430" y="746" text-anchor="middle">Structured log messages</text>
+<path class="arrow" d="M650 565 V600 H430 V630"/>
+
+<rect class="box" x="650" y="640" width="300" height="125" rx="14"/>
+<text class="title" x="800" y="685" text-anchor="middle">Persistent Results</text>
+<text class="sub" x="800" y="720" text-anchor="middle">Benchmark CSV files</text>
+<text class="sub" x="800" y="746" text-anchor="middle">Structured experiment records</text>
+<path class="arrow" d="M1030 702 H960"/>
+
+<text x="800" y="825" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#777">Python / scikit-learn prototype • Reproducible experiment execution</text>
+</svg>
